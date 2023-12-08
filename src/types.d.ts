@@ -5,6 +5,4 @@ export interface Page {
 }
 
 export type ApiPage = Omit<Page, 'id'>;
-export interface ApiPages {
-  [id: string]: ApiPage;
-}
+
