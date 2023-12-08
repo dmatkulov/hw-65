@@ -7,7 +7,11 @@ import PageLayout from "../../components/PageLayout/PageLayout";
 
 const Pages = () => {
   const params = useParams() as { pageId: string };
-  const [page, setPage] = useState<Page>();
+  const [page, setPage] = useState<Page>({
+    id: '',
+    title: '',
+    content: ''
+  });
   const [loading, setLoading] = useState(false);
   
   const fetchPages = useCallback(async () => {
